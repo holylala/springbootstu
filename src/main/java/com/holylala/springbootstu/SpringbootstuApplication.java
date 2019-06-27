@@ -1,7 +1,9 @@
 package com.holylala.springbootstu;
 
+import com.holylala.springbootstu.aspect.MyAspect;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
@@ -14,6 +16,13 @@ import org.springframework.stereotype.Service;
         , encoding="utf-8"
         ,ignoreResourceNotFound=true)
 public class SpringbootstuApplication {
+
+
+    //定义切面
+    @Bean(name="myAspect")
+    public MyAspect initMyAspect() {
+        return  new MyAspect();
+    }
 
     /**
      *  @ComponentScan(basePackages = {"com.holylala.springbootstu"},excludeFilters = {@ComponentScan.Filter(classes = Service.class)})

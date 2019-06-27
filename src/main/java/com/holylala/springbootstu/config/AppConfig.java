@@ -4,7 +4,6 @@ import java.util.Properties;
 import javax.sql.DataSource;
 
 import com.holylala.springbootstu.model.DataBaseProperties;
-import io.lettuce.core.dynamic.annotation.Value;
 import org.apache.commons.dbcp2.BasicDataSourceFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
